@@ -1,0 +1,52 @@
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px auto;
+    padding-top: 10px;
+    width: 300px;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-radius: 10%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.avatar {
+    display: flex;
+    width: 150px;
+    height: 150px;
+}
+
+.name {
+    font-weight: 700;
+    font-size: xx-large;
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    font-size: larger;
+
+}
+
+
+.stats {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.label {
+    font-weight: bold;
+}

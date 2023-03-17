@@ -1,14 +1,13 @@
+import { OnlineStatus } from "./FriendLIstItem.styled";
 
 
 
-
-export const FriendListItem = (id, avatar, name, isOnline) => {
-     const onlineSvg = "https://icons8.com/icon/FkQHNSmqWQWH/green-circle";
-    const offlineSvg = "https://icons8.com/icon/Zyo5wDjgJxRW/red-circle";
-    <li id={id}>
-        {{isOnline} ? onlineSvg : offlineSvg}
-        <span className="status">{isOnline}</span>
-        <img className={avatar} src="" alt="User avatar" width="48" />
-  <p className={name}></p>
+export const FriendListItem = ({ id, avatar, name, isOnline }) => {
+  return (
+    <li key={id}>
+        <OnlineStatus className="status"isOnline={isOnline}>{isOnline}</OnlineStatus>
+        <img className="avatar" src={avatar} alt="User avatar" width="48" />
+  <p className="name">{name}</p>
 </li>
+)
 }

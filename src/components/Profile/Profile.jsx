@@ -1,27 +1,27 @@
 import PropTypes from 'prop-types';
+import css from './Profile.module.css';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
-    console.log(avatar);
-    const UserStates = [{ label: 'Followers: ', quantity: stats.followers },
-    { label: 'Views: ', quantity: stats.views },
-    { label: 'Likes: ', quantity: stats.likes }];
+    const UserStates = [{ label: 'Followers', quantity: stats.followers },
+    { label: 'Views', quantity: stats.views },
+    { label: 'Likes', quantity: stats.likes }];
     
     return (
-        <div className="profile">
-            <div className="description">
+        <div className={css.profile}>
+            <div className={css.description}>
                 <img
                     src={avatar}
                     alt="User avatar"
-                    className="avatar"
+                    className={css.avatar}
                 />
-                <p className="name">{username}</p>
+                <p className={css.name}>{username}</p>
                 <p className="tag">@{tag}</p>
                 <p className="location">{location}</p>
             </div>
-            <ul className="stats">
+            <ul className={css.stats}>
                 {UserStates.map(({ label, quantity }) =>
-                    <li key={label}>
-                        <span className="label">{label}</span>
+                    <li className={css.item} key={label}>
+                        <span className={css.label}>{label}</span>
                         <span className="quantity">{quantity}</span>
                     </li>
                 )
