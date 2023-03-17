@@ -1,31 +1,28 @@
-// import PropTypes from 'prop-types';
-
-
+import PropTypes from 'prop-types';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
-    
-    const UserStates = [
-    { label: 'Followers', quantity: stats.followers },
-    { label: 'Views', quantity: stats.views },
-    { label: 'Likes', quantity: stats.likes }];
+    console.log(avatar);
+    const UserStates = [{ label: 'Followers: ', quantity: stats.followers },
+    { label: 'Views: ', quantity: stats.views },
+    { label: 'Likes: ', quantity: stats.likes }];
     
     return (
-        <div class="profile">
-            <div class="description">
+        <div className="profile">
+            <div className="description">
                 <img
-                    src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
+                    src={avatar}
                     alt="User avatar"
-                    class="avatar"
+                    className="avatar"
                 />
-                <p class="name">{username}</p>
-                <p class="tag">@{tag}</p>
-                <p class="location">{location}</p>
+                <p className="name">{username}</p>
+                <p className="tag">@{tag}</p>
+                <p className="location">{location}</p>
             </div>
-            <ul class="stats">
+            <ul className="stats">
                 {UserStates.map(({ label, quantity }) =>
                     <li key={label}>
-                        <span class="label">{label}</span>
-                        <span class="quantity">{quantity}</span>
+                        <span className="label">{label}</span>
+                        <span className="quantity">{quantity}</span>
                     </li>
                 )
                 }
@@ -34,6 +31,10 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
     );
 };
 
-// Profile.PropTypes = {
-//     username: PropTypes.string.isRequired,
-// };
+Profile.propTypes = {
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    avatar: PropTypes.string,
+    stats: PropTypes.exact({followers: PropTypes.number, views: PropTypes.number, likes: PropTypes.number })
+};

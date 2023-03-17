@@ -7,8 +7,8 @@ export const FriendListItem = (id, avatar, name, isOnline) => {
     const offlineSvg = "https://icons8.com/icon/Zyo5wDjgJxRW/red-circle";
     <li id={id}>
         {{isOnline} ? onlineSvg : offlineSvg}
-        <span class="status">{isOnline}</span>
-        <img class={avatar} src="" alt="User avatar" width="48" />
-  <p class={name}></p>
+        <span className="status">{isOnline}</span>
+        <img className={avatar} src="" alt="User avatar" width="48" />
+  <p className={name}></p>
 </li>
 }

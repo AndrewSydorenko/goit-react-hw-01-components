@@ -3,8 +3,7 @@
 
 
 export const FriendList = ({ friends } ) => {
-   console.log(friends);
-<ul class="friend-list">
+<ul className="friend-list">
     {friends.map(friend => (
         <li key={friend.id}>{friend.name}</li>
 ))}

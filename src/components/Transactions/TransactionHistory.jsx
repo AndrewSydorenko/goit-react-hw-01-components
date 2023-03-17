@@ -3,7 +3,7 @@
 
 
 export const TransactionsHistory = ({id, type, amount, currency}) => {
-    <table class="transaction-history">
+    <table className="transaction-history">
         <thead>
             <tr>
                 <th>Type</th>
