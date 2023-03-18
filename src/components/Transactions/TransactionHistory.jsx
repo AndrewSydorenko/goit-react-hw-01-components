@@ -28,8 +28,10 @@ export const TransactionsHistory = ({items}) => {
 
 
 TransactionsHistory.propTypes = {
-  id: PropTypes.string,
-  type: PropTypes.string,
-  amount: PropTypes.number,
-  currency: PropTypes.string,
+    items: PropTypes.exact({
+        id: PropTypes.string.isRequired,
+        type: PropTypes.string.isRequired,
+        amount: PropTypes.number.isRequired,
+        currency: PropTypes.string.isRequired
+    })
 }
