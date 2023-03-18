@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "//github.com/AndrewSydorenko/goit-react-hw-01-components/static/css/main.39a1d79d.css",
+    "main.js": "//github.com/AndrewSydorenko/goit-react-hw-01-components/static/js/main.774d5c40.js",
+    "index.html": "//github.com/AndrewSydorenko/goit-react-hw-01-components/index.html",
+    "main.39a1d79d.css.map": "//github.com/AndrewSydorenko/goit-react-hw-01-components/static/css/main.39a1d79d.css.map",
+    "main.774d5c40.js.map": "//github.com/AndrewSydorenko/goit-react-hw-01-components/static/js/main.774d5c40.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.39a1d79d.css",
+    "static/js/main.774d5c40.js"
+  ]
+}
