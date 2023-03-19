@@ -22,7 +22,7 @@ FriendList.propTypes = {
   friends: PropTypes.exact({
   name: PropTypes.string.isRequired,
   avatar: PropTypes.string,
-  isOnline: PropTypes.bool,
+  isOnline: PropTypes.bool.isRequired,
   id: PropTypes.number.isRequired,
   })
 }
